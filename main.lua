@@ -153,9 +153,10 @@ if savedKey then
 end
 
 if not KeyValid then
+    local KeyLibrary = loadstring(game:HttpGet(repo .. 'Library.lua'))()
     local user_key = ""
 
-    local KeyWindow = Library:CreateWindow({
+    local KeyWindow = KeyLibrary:CreateWindow({
         Title = 'DevryHub',
         Center = true,
         AutoShow = true,
@@ -192,6 +193,7 @@ if not KeyValid then
                     Library:Notify("DevryHub: Key validated. Initializing script...")
                     SaveKey(user_key)
                     KeyValid = true
+                    KeyLibrary:Unload()
                 else
                     Library:Notify("DevryHub: Key is invalid. Please try again.")
                     KeyValid = false
@@ -219,3 +221,14 @@ task.spawn(function()
         task.wait(5)
     end
 end)
+
+local Window = Library:CreateWindow({
+    Title = 'DevryHub',
+    Center = true,
+    AutoShow = true,
+    Resizable = true
+})
+
+local Tab = Window:AddTab("Main")
+
+local Groupbox = Tab:AddLeftGroupbox("Main")
