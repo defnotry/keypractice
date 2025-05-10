@@ -1,6 +1,6 @@
-local key = rawget(_G, "script_key")
-if key == "test" then
-    print("Access granted")
-else
-    error("Invalid key")
+-- verify
+if getgenv().key ~= "123" then
+    error("no")
 end
+
+-- rest of script
