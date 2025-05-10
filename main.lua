@@ -184,7 +184,7 @@ if not KeyValid then
         end
     })
 
-    MainGroupbox:AddButton("CheckKeyButton", {
+    MainGroupbox:AddButton({
         Text = "Check Key",
         Func = function()
             if user_key ~= "" then
@@ -200,7 +200,7 @@ if not KeyValid then
         end
     })
     MainGroupbox:AddDivider()
-    MainGroupbox:AddButton("GetKeyButton", {
+    MainGroupbox:AddButton({
         Text = "Get Key",
         Func = function()
             Library:Notify("DevryHub: Key retrieved. Please paste it into the browser.")
