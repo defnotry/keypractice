@@ -161,6 +161,7 @@ if not KeyValid then
         Center = true,
         AutoShow = true,
         Resizable = true,
+        Size =  UDim2.fromOffset(480, 360),
         ShowCustomCursor = true,
         NotifySide = "Left",
         TabPadding = 8,
