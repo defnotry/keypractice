@@ -207,7 +207,7 @@ if not KeyValid then
         Text = "Get Key",
         Func = function()
             Library:Notify("DevryHub: Key retrieved. Please paste it into the browser.")
-            setclipboard(getKeyUrl(ServiceID))
+            setclipboard("test")
         end
     })
 end
