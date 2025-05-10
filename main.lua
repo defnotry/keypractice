@@ -8,7 +8,6 @@ local repo = 'https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main
 local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
 local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
-local Pelinda = loadstring(game:HttpGet("https://releases.pelinda.io/main.lua"))()
 
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
@@ -43,12 +42,17 @@ end
 
 local function ValidateKey(key)
     Library:Notify("DevryHub: Validating key...")
-    return Pelinda.Init({
-        Service = ServiceID,
-        SilentMode = true,
-        Key = key,
-        SecurityLevel = 1
-    })
+    -- return Pelinda.Init({
+    --     Service = ServiceID,
+    --     SilentMode = true,
+    --     Key = key,
+    --     SecurityLevel = 1
+    -- })
+    if key == "devryhub98" then
+        return "validated!!"
+    else
+        return "invalid!!"
+    end
 end
 
 local function SaveKey(key)
