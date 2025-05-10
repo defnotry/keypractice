@@ -130,6 +130,7 @@ end
 if getgenv().devryhub_key and getgenv().devryhub_key ~= "insert_key_here" then
     if ValidateKey(getgenv().devryhub_key) == "validated!!" then
         Library:Notify("DevryHub: Key validated. Initializing script...")
+        SaveKey(getgenv().devryhub_key)
         KeyValid = true
     else
         savedKey = ReadKey()
@@ -161,7 +162,7 @@ if not KeyValid then
         Center = true,
         AutoShow = true,
         Resizable = true,
-        Size =  UDim2.fromOffset(480, 360),
+        Size = UDim2.fromOffset(480, 360),
         ShowCustomCursor = true,
         NotifySide = "Left",
         TabPadding = 8,
@@ -228,7 +229,7 @@ local Window = Library:CreateWindow({
     Center = true,
     AutoShow = true,
     Resizable = true,
-    Size =  UDim2.fromOffset(480, 360),
+    Size = UDim2.fromOffset(480, 360)
 })
 
 local Tab = Window:AddTab("Main")
