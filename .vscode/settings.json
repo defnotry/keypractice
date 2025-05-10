@@ -1,0 +1,12 @@
+{
+    "robloxLsp.diagnostics.globals": [
+        "getgenv",
+        "isfile",
+        "readfile",
+        "syn",
+        "writefile",
+        "gethwid",
+        "request",
+        "setclipboard"
+    ]
+}
