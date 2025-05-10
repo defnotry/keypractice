@@ -227,7 +227,8 @@ local Window = Library:CreateWindow({
     Title = 'DevryHub',
     Center = true,
     AutoShow = true,
-    Resizable = true
+    Resizable = true,
+    Size =  UDim2.fromOffset(480, 360),
 })
 
 local Tab = Window:AddTab("Main")
